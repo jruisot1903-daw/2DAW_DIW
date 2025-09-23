@@ -1,0 +1,22 @@
+table {
+    margin: 0 auto;
+    width: 700px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    font-weight: normal;
+}
+
+th:first-child,
+td:first-child {
+    background-color: yellow;
+}
+
+th,
+td {
+    background-color: red;
+}
