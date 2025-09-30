@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: rgb(0, 90, 156);
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+header p{
+    margin-top: 20px;
+    font-style: italic;
+}
+
+nav{
+    background-color: rgb(164, 190, 209);
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a{
+    border: 2px solid rgb(28, 107, 164);
+    margin: 25px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a[class$= active]{
+     color: yellow;
+} 
+
+nav+a{
+    color: rgb(124, 98, 165);
+}
+
+main{
+    background-color: rgb(244, 244, 244);
+
+}
+
+#noticia-principal{
+    margin:  15px 10px;
+    padding: 10px;
+    border: 2px solid rgb(41, 117, 172); 
+    border-radius: 5px;
+}
+
+article>h2{
+    margin: 5px 5px;
+}
+
+article p{
+    margin: 5px 5px;
+    font-weight: 300;
+}
+
+p>strong{
+    font-weight: bold;
+    text-decoration: underline dotted rgb(193, 214, 230);
+}
+
+section>h3{
+    color: rgb(58, 56, 57);
+}
+
+.noticia-div{
+    border: 2px solid rgb(3, 92, 157);
+    border-radius: 5px;
+    background-color: yellow;
+    margin: 10px 0;
+    padding: 25px 10px;
+}
+
+.noticia-div:last-child{
+    margin-bottom: 0;
+}
+
+.noticia-div:nth-child(2){
+    background-color: transparent;
+    padding: 20px 10px;
+}
+
+.empresa-tech{
+    text-decoration: underline;
+}
+
+div>h5{
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+footer{
+    background-color: rgb(0, 90, 156);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+a[href $= "com"]{
+    text-decoration: underline dotted red;
+}
