@@ -36,6 +36,10 @@ a[class$= active]{
      color: yellow;
 } 
 
+a[target]{
+    background-color: rgba(173, 216, 230, 0.301);
+
+}
 nav+a{
     color: rgb(124, 98, 165);
 }
