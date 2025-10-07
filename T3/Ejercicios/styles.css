@@ -1,0 +1,203 @@
+:root {
+    --texto-oscuro: #333;
+    --color-primario: #005a9c;
+    --color-secundario: #d9534f;
+    --color-fondo: #f4f4f4; 
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:var(--color-fondo);
+    color: var(--texto-oscuro);
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1, h2, h3 {
+    color: var(--color-primario);
+}
+
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+/* Maquetación con Float */
+main {
+    overflow: auto;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: #333;
+    text-align: center;
+    border-radius: 8px;
+}
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+}
+
+article { 
+    width: 65%; 
+    float: left; 
+    box-sizing: border-box; 
+    padding-right: 20px;
+}
+
+
+
+aside { 
+    width: 35%; 
+    float: right; 
+    box-sizing: border-box; 
+}
+
+.info-nutricional, form { 
+    clear: both; 
+        padding-top: 20px; 
+}
+
+article, aside, .info-nutricional, form {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+table { 
+    width: 100%; 
+    border-collapse: 
+    collapse; 
+}
+th, td { 
+    padding: 8px; 
+    border: 1px solid #ddd; 
+    text-align: left;
+}
+
+th { 
+    background-color: var(--color-primario);
+    color: #fff; 
+}
+
+button { 
+    padding: 10px 15px; 
+    border: none; 
+    background-color: var(--color-primario);
+    color: #fff;  
+    cursor: pointer; 
+    border-radius: 5px;
+}
+
+input[type="text"], input[type="email"] { 
+    width: 90%; 
+    padding: 8px; 
+}
+
+
+footer { 
+    clear: both; 
+    text-align: center; 
+    padding: 20px; 
+    margin-top: 20px; 
+    border-top: 1px solid #ccc; 
+}
+
+/*********************** EJERCICIOS ***********************/
+
+nav li:hover{
+    background: var(--color-secundario);
+}
+
+section:target h2{
+    color: var(--color-secundario);
+    text-decoration: underline;
+}
+
+input[type= "email"]:required , input[type = "text"]:required {
+    border-left: 5px solid var(--color-primario);
+}
+
+input[type= "email"]:invalid , input[type = "text"]:invalid {
+    border-left: 5px solid var(--color-secundario);
+}
+
+input[type = checkbox]:checked+label , input[type = radio]:checked+label{
+    font-weight: bold;
+    color: var(--color-primario)
+}
+
+input[type = checkbox]:disabled + label{
+    color: var(--color-fondo);
+    text-decoration: line-through;
+}
+
+.ingredientes ul li:not(:has(span)){
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+tbody tr:nth-child(odd){
+    background: var(--color-secundario);
+}
+
+tbody tr td:first-child , thead tr th:first-child{
+    text-align: right;
+}
+
+div p:only-child{
+    border-left: 3px dotted var(--color-secundario  );
+}
+
+aside> p:empty::after{
+    content: "Más consejos próximamente...  ";
+    
+}
+
+#preparacion ol li:nth-child(-1n+3){
+    color: #2a642a;
+    font-weight: bold;
+}
+
+#preparacion ol li:nth-last-child(-1n+3){
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+h2::after{
+    content: " »";  
+    color: var(--color-secundario);
+}
+
+aside> div:nth-of-type(2){
+    background-color: #fffbe6;
+}
+
+.ingredientes ul li::marker{
+    color: green;
+    font-size: 1.5em;
+}
+
+div > p:first-child::first-letter{
+    font-size: 3em;
+    color: var(--color-secundario);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div > p:first-child::first-line{
+    font-style: italic;
+}
+
+*::selection{
+    background: var(--color-secundario);
+    color: var(--color-primario);
+}
