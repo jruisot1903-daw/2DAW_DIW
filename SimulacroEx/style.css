@@ -1,0 +1,144 @@
+:root{
+    --color-primario: #0A4A7A;
+    --color-fondo: #f4f4f4;
+    --color-secundario: #008CBA;
+    --color-tex: #008CBA;
+    --color-footer: #333;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    text-align: justify;
+    width: 100%;
+    height: auto;
+}
+
+header{
+    background-color: var(--color-primario);
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    display: flex;
+}
+
+h2{
+    margin-left: 25%;
+    margin-top: 1%;
+}
+nav{
+    padding: 25px;
+    text-align: center;
+    margin-right: 20%;
+}
+
+nav a{
+    margin: 5px ,0;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+}
+
+div{
+    background-color: var(--color-fondo);
+    display: flex;
+}
+main{
+  width: 70%;
+
+}
+
+aside{
+    width: 30%;
+    background-color: white;
+}
+
+article{
+    columns: 200px 2;
+    margin:  5px auto;
+    background-color: white;
+}
+
+
+article figure{
+    float: right;
+}
+
+figure > img{
+    box-shadow: 10px 5px 5px var(--color-primario);
+}
+
+h3{
+    color: var(--color-primario);
+}
+
+article + h3{
+     column-span: all;
+}
+
+hr{
+    width: 100%;
+    color: var(--color-footer);
+}
+
+
+
+aside section{
+    margin-top: 10px;
+}
+
+
+section img{
+    border-radius: 100px;
+}
+button{
+    padding: 5px;
+    background-color: var(--color-primario);
+    color: white;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--color-footer);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    
+    border: 1px solid lightgray;
+    font-weight: normal;
+}
+
+table tr:nth-child(odd){
+    background: lightgray;
+}
+
+th{
+    font-weight: bold;
+}
+
+.text::first-letter{
+    color: var(--color-primario);
+    font-size: 40px;
+}
