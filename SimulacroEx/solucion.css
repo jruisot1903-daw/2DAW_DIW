@@ -1,0 +1,76 @@
+:root{
+    --color-principal: #0A4A7A;
+    --color-secundario: #008cba;
+    --color-fondo: #f4f4f4;
+    --color-texto: #333;
+    --color-blanco: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*CABECERA*/
+
+.cabecera{
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    overflow-y: auto; /*Le da la altura necesaria para que no se rompa al flotar los elementos*/
+}
+
+.cabecera h1{
+    float: left;
+}
+
+.cabecera .navegacion{
+    float: right;
+
+}
+
+/*CUERPO*/
+body{
+    background-color: var(--color-fondo);
+}
+
+/*MAIN*/
+
+
+.principal{
+    float: left;
+    width: 65%;
+}
+
+.principal .articulo .img-articulo{
+    width: 400px;
+}
+
+.principal .articulo .flota-der{
+    float: right;
+}
+
+.principal .articulo .flota-izq{
+    float: left;
+}
+
+
+/*ASIDE*/
+.lateral{
+    float: right;
+    width: 35%;
+}
+
+.lateral .img-perfil{
+    width: 100px;
+    border-radius: 500px;
+}
+
+/*PIE*/
+
+
+footer{
+    background-color: var(--color-texto);
+     clear: both;
+}
+
