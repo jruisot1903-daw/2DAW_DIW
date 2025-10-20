@@ -1,9 +1,11 @@
 :root{
     --color-principal: #0A4A7A;
     --color-secundario: #008cba;
-    --color-fondo: #f4f4f4;
+    --color-fondo: #cccccc;
     --color-texto: #333;
     --color-blanco: white;
+    --fuente-cabecera: "Georgia, serif";
+    --fuente-cuerpo: "Arial";
 }
 
 *{
@@ -12,16 +14,24 @@
     border: 0;
 }
 
+/*CONTENEDOR*/
+.contenedor{
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /*CABECERA*/
 
 .cabecera{
     background-color: var(--color-principal);
-    color: var(--color-blanco);
     overflow-y: auto; /*Le da la altura necesaria para que no se rompa al flotar los elementos*/
 }
 
 .cabecera h1{
     float: left;
+    color: var(--color-blanco);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
 }
 
 .cabecera .navegacion{
@@ -29,9 +39,43 @@
 
 }
 
+
+.cabecera .navegacion ul{
+    margin-top: 10px;
+}
+
+.cabecera .navegacion li{
+    display: inline;
+}
+
+.cabecera .navegacion a:hover{
+    background-color: var(--color-blanco);
+    color: var(--color-secundario);
+    border-radius: 5px;
+}
+
+.cabecera .navegacion li a{
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.cabecera > div {
+    margin: 20px;
+}
+
+.cabecera .navegacion li::before{
+    content: "卍";
+    color: white;
+}
+
 /*CUERPO*/
 body{
     background-color: var(--color-fondo);
+    font-family: var(--fuente-cuerpo);
+    text-align: justify;
 }
 
 /*MAIN*/
@@ -42,28 +86,148 @@ body{
     width: 65%;
 }
 
+.articulo {
+    background-color:  var(--color-blanco);
+    margin: 15px;
+    border-radius: 10px;
+    padding-bottom: 25px;
+}
+
+.articulo h2{
+    font-family: var(--fuente-cabecera);
+    color: var(--color-principal);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.articulo p{
+    padding: 0 20px;
+}
+
+.articulo figure + p::first-letter{
+    color: var(--color-secundario);
+    font-size: 3em;
+    font-weight: bold;
+    font-family: var(--fuente-cabecera);
+    float: left;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
 .principal .articulo .img-articulo{
     width: 400px;
 }
 
 .principal .articulo .flota-der{
     float: right;
+    margin-right: 25px;
+    margin-left: 15px;
 }
 
 .principal .articulo .flota-izq{
     float: left;
+    margin-right: 15px;
+    margin-left: 25px;
 }
+
+.principal .articulo figcaption{
+    color: darkgrey;
+    text-align: right;
+    font-size: 0.8em;
+}
+
 
 
 /*ASIDE*/
 .lateral{
     float: right;
     width: 35%;
+    overflow: auto;
 }
 
 .lateral .img-perfil{
     width: 100px;
-    border-radius: 500px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.lateral .img-perfil:hover{
+    box-shadow: var(--color-secundario) 0 0 5px ; 
+}
+
+.lateral form label{
+    margin:  0 20px;
+}
+
+.lateral form input[type= "email"]{
+        display: block;
+        width: 80%;
+        margin: 0 20px;
+        padding: 10px;
+        border: 1px solid var(--color-secundario);
+        border-radius: 5px;
+}
+
+.lateral form button{
+        width: 86%;
+        margin: 5px 20px;
+        padding: 10px;
+        background-color: var(--color-secundario);
+        color: var(--color-blanco);
+        font-weight: bold;
+        border-radius: 4px;
+}
+
+.lateral form button:hover{
+    box-shadow: var(--color-secundario) 0 0 5px ; 
+}
+
+.lateral form input[type= "email"]:invalid{
+       box-shadow: red 0 0 5px ; 
+       border: 1px solid red;
+}
+
+.lateral p{
+    padding: 0 20px;
+}
+
+
+.lateral .section{
+    background-color:  var(--color-blanco);
+    margin: 15px 15px 15px;
+    border-radius: 10px;
+    padding-bottom: 25px;
+}
+
+.lateral .section h3{
+    font-family: var(--fuente-cabecera);
+    color: var(--color-secundario);
+    margin: 20px;
+    padding: 10px;
+    border-bottom: 1px solid darkgrey;
+}
+
+
+.lateral table{
+    border-collapse: collapse;
+    margin: 20px;
+    width: 90%;
+}
+
+.lateral table th, table td{
+    padding: 10px;
+    text-align: center;
+}
+
+table thead th{
+    background-color: var(--color-fondo);
+    border-bottom: 2px dotted  black;
+}
+
+table tbody tr:nth-child(even){
+    background-color: var(--color-fondo);
+    border-bottom: 2px dotted  black;
 }
 
 /*PIE*/
@@ -71,6 +235,16 @@ body{
 
 footer{
     background-color: var(--color-texto);
-     clear: both;
+    clear: both;
+    text-align: center;
+    color: var(--color-blanco);
+    padding: 20px;
 }
 
+footer a{
+    color: var(--color-secundario);
+}
+
+footer a::after{
+    content: " ֍";
+}
