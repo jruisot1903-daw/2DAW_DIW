@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 /*CONTENEDOR*/
@@ -162,7 +163,7 @@ body{
 
 .lateral form input[type= "email"]{
         display: block;
-        width: 80%;
+        width: 86%;
         margin: 0 20px;
         padding: 10px;
         border: 1px solid var(--color-secundario);
