@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Z-index</title>
+    <style>
+        div{
+            margin: 5px;
+            padding: 20px;
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 10px;
+          
+        }
+
+        .div-prin{
+            position: relative;
+            background-color: thistle;
+           z-index: 40;
+        }
+
+        .div-secun{
+            position: relative;
+            bottom  : 25px;
+            left: 25px;
+            z-index: 35;
+/*Hace que unas se queden por delante de las otras*/
+            background-color: teal;
+        }
+
+        .div-ter{
+            position: relative;
+            z-index: 30;
+            bottom  : 50px;
+            left: 50px;
+            background-color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-prin">Div Primario</div>
+    <div class="div-secun">Div Secundario</div>
+    <div class="div-ter">Div Tercero</div>
+</body>
+</html>

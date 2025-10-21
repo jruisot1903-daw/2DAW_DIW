@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Static</title>
+    <style>
+        div{
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: tomato;
+        }
+
+        .div-secun{
+            position: static;
+            /*Hace que no funcione ni las propiedades de moverlo o desplazarlo*/
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-prin">Div Pricipal</div>
+    <div class="div-secun">Div Secundario</div>
+</body>
+</html>

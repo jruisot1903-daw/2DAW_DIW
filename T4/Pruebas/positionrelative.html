@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Relative</title>
+    <style>
+        div{
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: tomato;
+        }
+
+        .div-prin{
+            background-color: thistle;
+        }
+
+        .div-secun{
+            position: relative;
+            /*Lo desplaza en los valores que le demos pero la caja ocupa lo que ocupaba*/
+            bottom: 50px;
+            left: 10px;
+            background-color: teal;
+        }
+
+        .div-ter{
+            background-color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-prin">Div Pricipal</div>
+    <div class="div-secun">Div Secundario</div>
+    <div class="div-ter">Div Tercero</div>
+</body>
+</html>

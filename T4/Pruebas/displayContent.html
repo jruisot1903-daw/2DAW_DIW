@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispaly content</title>
+    <style>
+        .div-principal{
+            background-color: yellowgreen;
+            width: 500px;
+            height: 400px;
+        }
+
+        .div-secun{
+            display: contents; /*Lo quita del arbol dom y desaparece como tal y sus hijos pasan al padre del mismo*/
+            background-color: orangered;
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-principal">
+        DIV Principal
+        <div class="div-secun">
+            DIV secundario
+            <p>Párrafo1</p>
+            <p>Párrafo2</p>
+        </div>
+    </div>
+</body>
+</html>

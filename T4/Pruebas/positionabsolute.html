@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute</title>
+    <style>
+        div{
+            padding: 20px;
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 10px;
+          
+        }
+
+        .div-padre{
+            margin: 200px;
+            position: relative;
+            background-color: thistle;
+        }
+
+        .div-hijo{
+            
+            position: absolute;
+/*hace que se posicione cogiendo de referencia a su padre , El padre tiene que terner position relative*/
+            top: 25px;
+            left: 25px;
+            background-color: teal;
+            width: 150px;
+
+        }
+
+        .div-ter{
+            margin-left: 200px;
+            background-color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-padre">Div Padre
+    <div class="div-hijo">Div Hijo</div>
+    </div>
+    <div class="div-ter">Div Tercero</div>
+</body>
+</html>
