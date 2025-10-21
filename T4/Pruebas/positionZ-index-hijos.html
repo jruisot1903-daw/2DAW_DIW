@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Z-index-hijos</title>
+    <style>
+        .caja-padre{
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 150px;
+            position: relative;
+            margin: 20px;
+            height: 150px;
+        }
+
+        .p1{
+            background-color: violet;
+            z-index: 300;
+        }
+
+        .p1h1{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: burlywood;
+            z-index: 1;
+        }
+
+        .p1h2{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background-color: yellowgreen;
+            z-index: 400;
+        }
+
+
+        .p2{
+            z-index: 200;
+            background-color: lime;
+        }
+         .p2h1{
+            position: absolute;
+            bottom: 50px;
+            left: 75px;
+            background-color: slateblue;
+        }
+
+        .p2h2{
+            position: absolute;
+            bottom: 25px;
+            left: 50px;
+            background-color: olive;
+        }
+
+       .caja-hijo{
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        border-radius: 5px;
+       }
+
+
+    </style>
+</head>
+<body>
+    <div class="caja-padre p1">
+        Padre 1
+        <div class="caja-hijo p1h1">hijo1 Padre1</div>
+        <div class="caja-hijo p1h2">hijo2 Padre1</div>
+    </div>
+
+    <div class="caja-padre p2">
+        Padre 2
+        <div class="caja-hijo p2h1">hijo1 Padre2</div>
+        <div class="caja-hijo p2h2">hijo2 Padre2</div>
+    </div>
+</body>
+</html>
