@@ -22,7 +22,7 @@ header{
 }
 
 .imgHeader{
-    width: 8%;
+    width: 8em;
     float: left;
     margin-left: 15px;
     margin-top: 3px;
@@ -71,21 +71,66 @@ main{
     overflow-y: auto;
 }
 
-.hombrePosando{
-    border-radius: 4px;
-    margin-top: 5%;
-    margin-left: 10%;
+/* Sección Start */
+.div1 {
+    margin: 40px 10%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.hombrePosando {
+    width: 300px;
     float: left;
+    margin-right: 30px;
+    border-radius: 8px;
 }
 
-.div1-hijo{
-    float: right;
-    text-align: center;
-    vertical-align: middle;
-}
-
-h3{
+.div1 h3 {
+    float: left;
+    font-size: 2em;
     color: var(--color-boton-header);
+    margin-top: 80px;
 }
+
+/* Sección Market */
+.div2 {
+    margin: 40px 10%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.div2 img {
+    width: 300px;
+    float: left;
+    margin-right: 30px;
+    border-radius: 8px;
+}
+
+ .texto {
+    float: left;
+    max-width: 50%;
+}
+
+ .texto h3 {
+    font-size: 2em;
+    color: var(--color-boton-header);
+    margin-bottom: 10px;
+}
+
+ .texto p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+ .texto a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 
 
