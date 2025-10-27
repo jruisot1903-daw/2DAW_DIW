@@ -119,16 +119,12 @@ main {
 
 .flotante {
   position: relative;
-  top: -150px;
-  right: -200px;
+  top: -35px;
+  right: 50px;
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.flotante:hover {
-  top: -145px;
-  transform: scale(1.15);
-}
 
 /* TEXTO */
 .texto {
@@ -164,7 +160,7 @@ main {
 .bolsaCompra{
   position: absolute;
   width: 25px;
-  left: 600px;
+  left: 870px;
   top: 170px;
 }
 
@@ -172,13 +168,13 @@ main {
   position: absolute;
   width: 25px;
   top: 170px;
-  left: 150px;
+  left: 200px;
 }
 
 .ola-superior{
   position: absolute;
   width: 25px;
-  left: 385px;
+  left: 550px;
   top: 155px;
 }
 
@@ -186,7 +182,7 @@ main {
 .ola{
   position: absolute;
   top: 230px;
-  left: 100px;
+  left: 150px;
   background-color: white;
   box-shadow: 0 4px 12px var(--color-sombra);
   border-radius: 5px;
@@ -201,11 +197,11 @@ main {
 .dominio{
   position: absolute;
   top: 230px;
-  left: 470px;
+  left: 750px;
   background-color: white;
   box-shadow: 0 4px 12px var(--color-sombra);
   border-radius: 100px;
-  padding-right: 30px;
+  padding-right: 20px;
 }
 
 .dominio-text{
@@ -217,7 +213,7 @@ main {
   width: 20px;
   position: absolute;
   top: 235px;
-  left: 640px;
+  left: 915px;
 
 }
 
@@ -232,14 +228,14 @@ main {
 
 .lineaGrande{
   width: 25%;
-  top: 400px;
-  left: 230px;
+  top: 500px;
+  left: 330px;
 }
 
 .lineaPequeña{
   width: 10%;
-  top: 430px;
-  left: 340px;
+  top: 520px;
+  left: 440px;
 
 }
 
@@ -266,8 +262,8 @@ main {
   box-shadow: 0 4px 12px var(--color-sombra);
   padding: 40px;
   background-color: white;
-  left: 40px;
-  top: 700px;
+  left: 4dvh;
+  top: 750px;
 }
 
 .iconoFace{
@@ -285,19 +281,19 @@ main {
 .bolsa-compra{
   position: absolute;
   width: 25px;
-  top: 165px;
+  top: 150px;
   left: 35px;
 }
 
 .linea-compraGrande{
   width: 65%;
-  top: 170px;
+  top: 155px;
   left: 70px;
 }
 
 .linea-compraPequena{
   width: 20%;
-  top: 185px;
+  top: 170px;
   left: 70px;
 }
 
@@ -305,22 +301,64 @@ main {
   width: 150px;
 }
 
-.zapas{
+.zapas {
   position: absolute;
-  border-radius: 5px;
-  box-shadow: 0 4px 12px var(--color-sombra);
-  padding: 40px;
+  right: 850px;
+  bottom: -320px;
   background-color: white;
-  left: 570px;
-  top: 1050px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  width: 260px;
+  text-align: center;
 }
 
-.google{
+
+.linea-google {
+  width: 120px;
+  height: 5px;
+  border-radius: 10px;
   background-color: var(--color-lineasSeparatorias);
-  padding: 15px; 
-  border-radius: 100px;
+  margin: 10px auto 15px;
 }
 
+.zapatilla1,
+.zapatilla2 {
+  width: 90px;
+  margin: 0 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.zapatilla1:hover,
+.zapatilla2:hover {
+  transform: scale(1.05);
+}
+
+.google {
+  position: relative;
+  width: 220px; 
+  height: 25px;
+  background-color: var(--color-lineasSeparatorias);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+.logoGoogle {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+}
+
+.microfono {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+}
 
 
 .div2 .texto {
