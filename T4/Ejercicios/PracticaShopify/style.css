@@ -313,6 +313,12 @@ main {
   text-align: center;
 }
 
+.zapas2{
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-radius: 12px;
+}
+
 
 .linea-google {
   width: 120px;
