@@ -46,6 +46,10 @@
     display: none;
 }
 
+.tiene-sub:hover{
+    text-decoration: 1px solid white;
+}
+
 .tiene-sub:hover .submenu{
         display: block;
 }
