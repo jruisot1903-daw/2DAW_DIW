@@ -117,10 +117,10 @@ body{
 }
 
 .text .p-text{
-    background-color: rgb(230, 233, 238);
+    background-color: rgba(230, 233, 238, 0);
 }
 
-.text:hover,    .p-text:hover{
+.text:hover{
     background-color: rgb(158, 159, 190);
 }
 /*MAIN*/
