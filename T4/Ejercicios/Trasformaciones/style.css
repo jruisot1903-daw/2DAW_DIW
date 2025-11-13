@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.caja{
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px auto;
+    transition: all 1s ease;
+}
+
+.mover{
+    transform: translate(0% , 0%);
+}
+.mover:hover{
+    transform: translate(50% , 25%);
+    transition: transform 0.5s ease;
+}
+
+.rotar{
+    transform: rotate(0deg);
+}
+
+.rotar:hover{
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+
+.escalar{
+    transform: scale(1);
+}
+
+.escalar:hover{
+    transform: scale(1.5);
+    transition: transform 0.5s ease;
+}
+

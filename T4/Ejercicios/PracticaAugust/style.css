@@ -360,14 +360,13 @@ body {
 }
 
 .bloque-valor {
-  float: left;
   width: 28%;
   margin: 1%;
   padding: 25px;
   border-radius: 12px;
   background-color: #1f2a60;
   border: 3px solid;
-  box-sizing: border-box;
+  display: inline-block;
   text-align: left;
 }
 
@@ -383,7 +382,6 @@ body {
   color: white;
 }
 
-/* Colores de borde */
 .verde { 
   background-color: #4caf50; 
   border-color: #4caf50;
