@@ -1,0 +1,34 @@
+p{
+    position: relative;
+    animation-duration: 3s;
+    animation-name: slidein;
+    width: fit-content; /* Ajusta el ancho al contenido a su caja */
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein{
+    0%{
+        left: 100%;
+        color: red;
+    }
+
+    33%{
+        left: 50%;
+        transform: rotate(0deg);
+        color: blue;
+    }
+
+
+    66% {
+        left: 50%;
+        transform: rotate(360deg);
+        color: green;
+    }
+
+    100%  {
+        left: 0%;
+        transform: rotate(360deg);
+        color: goldenrod;
+    }
+}

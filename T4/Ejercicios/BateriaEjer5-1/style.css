@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/*1º*/
+.part1{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}
+
+.part1:hover{
+    transition: ease-in-out 0.4s;
+    background-color: green;
+}
+
+/*2º*/
+.part2:hover .imgpart2 {
+    transform:scale(1.1);
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out    ;
+    background-color: red;
+}
+
+/*3º*/
+.part3{
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 10px;    
+    overflow-y: auto;
+    background-color: blue;
+}
+
+.part3-1, .part3-2{
+      height: 150px;
+      margin: 350px;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 15px;
+      padding: 5px;
+}
+
+.part3-1{
+    background-color: rgba(102, 51, 153, 0.527);
+
+}
+
+.part3-2{
+    background-color: orange;
+
+}
+
+.part3:hover .part3-1{
+    background-color: rebeccapurple;
+}
+
+/*4º*/
+
+.part4 {
+  display: inline-block;       
+  position: relative;          
+  cursor: pointer;            
+}
+
+.part4::after {
+  content: "";                 
+  position: absolute;
+  left: 0;
+  bottom: 0;                  
+  width: 0%;                   
+  height: 2px;                 
+  background-color: black;     
+  transition: width 0.3s ease; 
+}
+
+.part4:hover::after {
+  width: 100%;                 
+}
+
+/*5º*/
+.part5{
+    background-color: lightgray;
+    width: 200px;
+    height: 100px;
+}
+.part5:hover{
+    transform: translate(50px, 20px);
+}
+
+/*6º*/
+.part6:hover{
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+/*7º*/
+.part7{
+    width: 200px;
+    height: auto;
+    background-color: coral;
+    text-align: center;
+}
+
+.part7:hover{
+    transform: skew(-10deg, 15deg);
+    transition: 0.5s;
+}
+
+/*8º*/
+.part8{
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.part8:hover{
+    transform: scale(1.2) translate(100px, 0px) rotate(45deg);
+    transition: 0.5s;
+}
+
+/*9º*/
+
+.card {
+  perspective: 1000px; /*Define la perspectiva para el efecto 3D*/
+  width: 200px;
+  height: auto;
+
+}
+
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; 
+}
+
+/* La cara frontal y trasera */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta el contenido de la cara posterior cuando no está visible */
+}
+
+
+/* Posiciona la cara trasera */
+.card-back {
+  transform: rotateY(180deg); /* Gira la cara trasera 180 grados */
+}
+
+/* Aplica la rotación al pasar el cursor */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/*10º*/
+.part10{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(155, 24, 24);
+}
