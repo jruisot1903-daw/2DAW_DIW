@@ -131,44 +131,222 @@ body{
 /*9º*/
 
 .card {
-  perspective: 1000px; /*Define la perspectiva para el efecto 3D*/
-  width: 200px;
-  height: auto;
-
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
 }
-
 
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d; 
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
 }
 
-/* La cara frontal y trasera */
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /* Oculta el contenido de la cara posterior cuando no está visible */
-}
-
-
-/* Posiciona la cara trasera */
-.card-back {
-  transform: rotateY(180deg); /* Gira la cara trasera 180 grados */
-}
-
-/* Aplica la rotación al pasar el cursor */
 .card:hover .card-inner {
   transform: rotateY(180deg);
 }
 
-/*10º*/
-.part10{
-    height: 100px;
-    width: 100px;
-    background-color: rgb(155, 24, 24);
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;              
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  text-align: center;       
+  padding-top: 40px;        
 }
+
+.card-front {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.card-back {
+  background: #9b1818;
+  color: #fff;
+  transform: rotateY(180deg);
+  border: 1px solid #600d0d;
+}
+
+
+
+/*10º*/
+.part10 {
+  margin-top: 50px;
+  perspective: 600px; 
+}
+
+.caja {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(155, 24, 24);
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.caja:hover {
+  transform: rotateX(90deg);
+}
+
+/*11º*/
+.part11{
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.part11:active{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transform: translateY(4px);
+}
+
+/*12º*/
+.circulo {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  border-radius: 50%;
+  animation: pulsar 2s infinite alternate;
+}
+
+@keyframes pulsar {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+/*13º*/
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #eee;
+  text-align: center; 
+  overflow: hidden;  
+}
+
+.titulo {
+  float: left;              
+  margin-left: -100%;       
+  animation: deslizar 2s forwards;
+}
+
+@keyframes deslizar {
+  to {
+    margin-left: 50%;       
+    transform: translateX(-50%); 
+    opacity: 1;
+  }
+}
+
+/*14º*/
+
+.pelota {
+  width: 80px;
+  height: 80px;
+  background-color: crimson;
+  border-radius: 50%;
+  position: relative; 
+  animation: botar 1.5s infinite;
+  margin-left: 50px;
+}
+
+@keyframes botar {
+  0% {
+    transform: translateY(0);   
+  }
+  50% {
+    transform: translateY(-100px); 
+  }
+  100% {
+    transform: translateY(0);   
+  }
+}
+
+/*15º*/
+
+.cuadrado {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin-left: 30px;
+  animation: girar 4s linear infinite, cambiarColor 2s infinite alternate;
+}
+
+/* Animación de rotación */
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animación de cambio de color */
+@keyframes cambiarColor {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+/*16º*/
+
+.menu-icono {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.linea {
+  stroke: black;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: transform 0.4s ease, stroke 0.4s ease, opacity 0.4s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.rectangulo {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  transition: stroke 0.4s ease;
+}
+
+.menu-icono:hover .linea {
+  stroke: red;
+}
+
+.menu-icono:hover .rectangulo {
+  stroke: red;
+}
+
+.menu-icono:hover .linea2 {
+  opacity: 0;
+}
+
+.menu-icono:hover .linea1 {
+  transform: translateY(20px) rotate(45deg);
+}
+
+.menu-icono:hover .linea3 {
+  transform: translateY(-20px) rotate(-45deg);
+}
+
+
+
+
