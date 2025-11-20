@@ -1,0 +1,33 @@
+:root{
+    --color-moodle : rgb(35, 64, 123);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.linea-azul{
+    background-color: var(--color-moodle);
+    border: none;
+    height: 2px;
+}
+
+/*Header */
+.header{
+    box-shadow: 0 0 10px black;
+    padding: 0.5px;
+}
+
+.logo-moodle{
+    margin: 5px 5px;
+    height: 43px;
+    border-right: 1px solid var(--color-moodle);
+    padding-right: 10px;
+}
+
+.texto-centro{
+    font-size: 1em;
+}
+
