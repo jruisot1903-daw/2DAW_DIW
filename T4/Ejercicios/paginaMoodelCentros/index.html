@@ -24,22 +24,90 @@
         <div class="iconos-usuario">
             <span class="icono"><img src="./img/signo-de-interrogacion.png" alt="Interrogacción"></span>
             <span class="icono"><img src="./img/campana.png" alt="Campana"></span>
-            <span class="icono"><img src="./img/carta.png" alt="Carta"></span>
             <span class="icono usuario"><img src="./img/usuario.png" alt="Usuario"></span>
-            
+
             <div class="modo-edicion">
                 <span class="texto-edicion">Modo de edición</span>
                 <label class="switch">
                     <input type="checkbox">
                     <span class="slider"></span>
                 </label>
-                
+
             </div>
 
         </div>
 
     </header>
-    <main class="main"></main>
+    <main class="main">
+        <h2 class="text-area">Área personal</h2>
+        <div class="contenedor">
+            <div class="selector-orden">
+                <h2 class="text-orden">Vista de cursos</h2>
+                <label for="orden"></label>
+                <select id="orden">
+                    <option value="acceso">Último acceso</option>
+                    <option value="nombre" selected>Nombre del curso</option>
+                    <option value="favoritos">Favoritos</option>
+                </select>
+            </div>
+            <!-- Curso 1 -->
+            <div class="tarjeta curso-cliente">
+                <h3>Desarrollo web en entorno cliente</h3>
+                <div class="recursos">
+                    <img src="./img/cuestionario.png" alt="Cuestionario">
+                    <img src="./img/tarea.png" alt="Tarea">
+                    <img src="./img/foro.png" alt="Foro">
+                    <img src="./img/libro-abierto.png" alt="Calificaciones">
+                    <img src="./img/documento.png" alt="Recursos">
+                </div>
+            </div>
+
+            <!-- Curso 2 -->
+            <div class="tarjeta curso-servidor">
+                <h3>Desarrollo web en entorno servidor (CFGD)</h3>
+                <div class="recursos">
+                    <img src="./img/cuestionario.png" alt="Cuestionario">
+                    <img src="./img/tarea.png" alt="Tarea">
+                    <img src="./img/foro.png" alt="Foro">
+                    <img src="./img/libro-abierto.png" alt="Calificaciones">
+                    <img src="./img/documento.png" alt="Recursos">
+                </div>
+            </div>
+
+            <!-- Curso 3 -->
+            <div class="tarjeta curso-despliegue">
+                <h3>Despliegue de aplicaciones</h3>
+                <div class="recursos">
+                    <img src="./img/cuestionario.png" alt="Cuestionario">
+                    <img src="./img/tarea.png" alt="Tarea">
+                    <img src="./img/foro.png" alt="Foro">
+                    <img src="./img/libro-abierto.png" alt="Calificaciones">
+                    <img src="./img/documento.png" alt="Recursos">
+                </div>
+            </div>
+
+            <div class="controles-navegacion">
+                <div class="controles">
+                    <label for="mostrar">Mostrar:</label>
+                    <select id="mostrar">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="99" selected>99</option>
+                    </select>
+                </div>
+
+                <div class="navegacion">
+                    <button>&laquo;</button>
+                    <button>&raquo;</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
 
     <footer class="footer">
         <div class="footer-contenido">
