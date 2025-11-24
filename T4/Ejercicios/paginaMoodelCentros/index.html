@@ -1,126 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moodle</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+  </head>
 
-<body>
-    <hr class="linea-azul">
+  <body>
+    <hr class="linea-azul" />
     <header class="header">
-        <img class="logo-moodle" src="./img/moodlecentros-logo2.png" alt="Logo moodle">
-        <div class="contenido-header">
-            <h2 class="texto-centro">Centro: I.E.S. Pedro Espinosa</h2>
-            <nav class="menu-navegacion">
-                <a class="enlace" href="#">Área personal</a>
-                <a class="enlace" href="#">Mis cursos</a>
-                <a class="enlace" href="#">Desactivado</a>
-            </nav>
+      <img
+        class="logo-moodle"
+        src="./img/moodlecentros-logo2.png"
+        alt="Logo moodle"
+      />
+      <div class="contenido-header">
+        <h2 class="texto-centro">Centro: I.E.S. Pedro Espinosa</h2>
+        <nav class="menu-navegacion">
+          <a class="enlace" href="#">Área personal</a>
+          <a class="enlace" href="#">Mis cursos</a>
+          <a class="enlace" href="#">Desactivado</a>
+        </nav>
+      </div>
+      <div class="iconos-usuario">
+        <span class="iconos"
+          ><img src="./img/signo-de-interrogacion.png" alt="Interrogacción"
+        /></span>
+        <span class="iconos"
+          ><img src="./img/campana.png" alt="Campana"
+        /></span>
+        <span class="iconos usuario"
+          ><img src="./img/usuario.png" alt="Usuario"
+        /></span>
+
+        <div class="modo-edicion">
+          <span class="texto-edicion">Modo de edición</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
         </div>
-        <div class="iconos-usuario">
-            <span class="icono"><img src="./img/signo-de-interrogacion.png" alt="Interrogacción"></span>
-            <span class="icono"><img src="./img/campana.png" alt="Campana"></span>
-            <span class="icono usuario"><img src="./img/usuario.png" alt="Usuario"></span>
-
-            <div class="modo-edicion">
-                <span class="texto-edicion">Modo de edición</span>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-
-            </div>
-
-        </div>
-
+      </div>
     </header>
     <main class="main">
-        <h2 class="text-area">Área personal</h2>
-        <div class="contenedor">
-            <div class="selector-orden">
-                <h2 class="text-orden">Vista de cursos</h2>
-                <label for="orden"></label>
-                <select id="orden">
-                    <option value="acceso">Último acceso</option>
-                    <option value="nombre" selected>Nombre del curso</option>
-                    <option value="favoritos">Favoritos</option>
-                </select>
-            </div>
-            <!-- Curso 1 -->
-            <div class="tarjeta curso-cliente">
-                <h3>Desarrollo web en entorno cliente</h3>
-                <div class="recursos">
-                    <img src="./img/cuestionario.png" alt="Cuestionario">
-                    <img src="./img/tarea.png" alt="Tarea">
-                    <img src="./img/foro.png" alt="Foro">
-                    <img src="./img/libro-abierto.png" alt="Calificaciones">
-                    <img src="./img/documento.png" alt="Recursos">
-                </div>
-            </div>
+      <h2 class="text-area">Área personal</h2>
+      <div class="contenedor">
+        <div class="selector-orden">
+          <h2 class="text-orden">Vista de cursos</h2>
+          <label for="orden"></label>
+          <select id="orden">
+            <option class="blanco" value="acceso">Último acceso</option>
+            <option value="nombre" selected>Nombre del curso</option>
+            <option class="blanco" value="favoritos">Favoritos</option>
+          </select>
+        </div>
+        <!-- Curso 1 -->
+        <div class="tarjeta curso-cliente">
+          <div class="img-tarjeta">
+            <img class="img" src="./img/JS.gif" alt="Gif JavaScript" />
+          </div>
+          <h3>Desarrollo web en entorno cliente</h3>
 
-            <!-- Curso 2 -->
-            <div class="tarjeta curso-servidor">
-                <h3>Desarrollo web en entorno servidor (CFGD)</h3>
-                <div class="recursos">
-                    <img src="./img/cuestionario.png" alt="Cuestionario">
-                    <img src="./img/tarea.png" alt="Tarea">
-                    <img src="./img/foro.png" alt="Foro">
-                    <img src="./img/libro-abierto.png" alt="Calificaciones">
-                    <img src="./img/documento.png" alt="Recursos">
-                </div>
-            </div>
+          <label class="estrella">
+            <input type="checkbox" />
+            <svg viewBox="0 0 24 24" class="icono">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </label>
 
-            <!-- Curso 3 -->
-            <div class="tarjeta curso-despliegue">
-                <h3>Despliegue de aplicaciones</h3>
-                <div class="recursos">
-                    <img src="./img/cuestionario.png" alt="Cuestionario">
-                    <img src="./img/tarea.png" alt="Tarea">
-                    <img src="./img/foro.png" alt="Foro">
-                    <img src="./img/libro-abierto.png" alt="Calificaciones">
-                    <img src="./img/documento.png" alt="Recursos">
-                </div>
-            </div>
-
-            <div class="controles-navegacion">
-                <div class="controles">
-                    <label for="mostrar">Mostrar:</label>
-                    <select id="mostrar">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="99" selected>99</option>
-                    </select>
-                </div>
-
-                <div class="navegacion">
-                    <button>&laquo;</button>
-                    <button>&raquo;</button>
-                </div>
-            </div>
-
+          <div class="recursos">
+            <img src="./img/cuestionario.png" alt="Cuestionario" />
+            <img src="./img/tarea.png" alt="Tarea" />
+            <img src="./img/foro.png" alt="Foro" />
+            <img src="./img/libro-abierto.png" alt="Calificaciones" />
+            <img src="./img/documento.png" alt="Recursos" />
+          </div>
         </div>
 
+        <!-- Curso 2 -->
+        <div class="tarjeta curso-servidor">
+          <div class="img-tarjeta">
+            <img class="img" src="./img/fondoRosa.jpg" alt="Foto servidor" />
+          </div>
+          <h3>Desarrollo web en entorno servidor (CFGD)</h3>
+
+          <label class="estrella">
+            <input type="checkbox" />
+            <svg viewBox="0 0 24 24" class="icono">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </label>
+
+          <div class="recursos">
+            <img src="./img/cuestionario.png" alt="Cuestionario" />
+            <img src="./img/tarea.png" alt="Tarea" />
+            <img src="./img/foro.png" alt="Foro" />
+            <img src="./img/libro-abierto.png" alt="Calificaciones" />
+            <img src="./img/documento.png" alt="Recursos" />
+          </div>
+        </div>
+
+        <!-- Curso 3 -->
+        <div class="tarjeta curso-despliegue">
+          <div class="img-tarjeta">
+            <img class="img" src="./img/despliegue.jpg" alt="Foto Despliegue" />
+          </div>
+          <h3>Despliegue de aplicaciones</h3>
+
+          <label class="estrella">
+            <input type="checkbox" />
+            <svg viewBox="0 0 24 24" class="icono">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </label>
+
+          <div class="recursos">
+            <img src="./img/cuestionario.png" alt="Cuestionario" />
+            <img src="./img/tarea.png" alt="Tarea" />
+            <img src="./img/foro.png" alt="Foro" />
+            <img src="./img/libro-abierto.png" alt="Calificaciones" />
+            <img src="./img/documento.png" alt="Recursos" />
+          </div>
+        </div>
+
+        <div class="controles-navegacion">
+          <div class="controles">
+            <label for="mostrar">Mostrar:</label>
+            <select id="mostrar">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="99" selected>99</option>
+            </select>
+          </div>
+
+          <div class="navegacion">
+            <button>&laquo;</button>
+            <button>&raquo;</button>
+          </div>
+        </div>
+      </div>
     </main>
 
-
-
     <footer class="footer">
-        <div class="footer-contenido">
-            <img class="logo" src="./img/eu.png" alt="Unión Europea">
-            <img class="logo" src="./img/ministerio.png" alt="Ministerio de Educación">
-            <img class="logo" src="./img/fondos.png" alt="Fondos Europeos">
-            <img class="logo" src="./img/junta.png" alt="Junta de Andalucía">
-        </div>
-        <img class="info-icono" src="./img/info.png" alt="Información">
+      <div class="footer-contenido">
+        <img class="logo" src="./img/eu.png" alt="Unión Europea" />
+        <img
+          class="logo"
+          src="./img/ministerio.png"
+          alt="Ministerio de Educación"
+        />
+        <img class="logo" src="./img/fondos.png" alt="Fondos Europeos" />
+        <img class="logo" src="./img/junta.png" alt="Junta de Andalucía" />
+      </div>
+      <img class="info-icono" src="./img/info.png" alt="Información" />
     </footer>
-
-    </footer>
-
-</body>
-
+  </body>
 </html>

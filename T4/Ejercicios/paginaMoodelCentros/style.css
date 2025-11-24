@@ -90,7 +90,7 @@ body{
     align-items: center;
 }
 
-.icono img {
+.iconos img {
     width: 25px;
     height: 30px;
     margin-right: 5px;
@@ -219,6 +219,7 @@ body{
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
     background-color: #fff;
+    position: relative  ;
 }
 
 .tarjeta h3 {
@@ -226,6 +227,48 @@ body{
     margin-bottom: 15px;
     color: var(--color-texto);
 }
+
+.img-tarjeta{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.img{
+    height: auto;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    
+}
+
+/*Estrella de fav*/
+
+.estrella {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.estrella input {
+  display: none;
+}
+
+.icono {
+  width: 25px;
+  height: 25px;
+  fill: transparent;
+  stroke: var(--gris);
+  stroke-width: 1.5;
+  transition: fill 0.3s ease;
+  position: absolute;
+  right: 20px;
+  top: 200px;
+}
+
+.estrella input:checked + .icono {
+  fill: var(--color-moodle);
+  stroke: var(--color-moodle);
+}
+
 
 .curso-cliente {
     background: linear-gradient(to bottom right, #ffe680, #fff2b3);
@@ -316,7 +359,10 @@ body{
     cursor: pointer;
 }
 
-
+.blanco{
+    background-color: var(--blanco);
+    color: var(--color-texto);
+}
 
 
 /*Footer*/
