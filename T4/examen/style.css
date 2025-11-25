@@ -1,0 +1,234 @@
+:root{
+    --naranja : #ff6600;
+    --black: #444;
+    --gris: #f4f4f4;
+    --blanco: white;
+    --rosa: lightpink;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: var(--blanco);
+}
+
+header{
+    position: relative;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--blanco);
+    padding: 10px;
+}
+
+.header-flota-der{
+    float: right;
+    left: 70%;
+    position: absolute;
+}
+
+.header-flota-der li{
+    list-style: none;
+    display: inline-block;
+}
+
+.header-flota-der a{
+    color: var(--blanco);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 20px;
+}
+
+.header-flota-der a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--naranja);
+    transition: width 0.3s ease; 
+}
+
+
+.header-flota-izq h1{
+    display: inline;
+}
+
+.header-flota-izq object{
+    width: 2%;
+    animation: girar 4s linear infinite;
+    margin-left: 200px;
+}
+
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-flota-izq:hover{
+    color: var(--naranja);
+    filter: invert(42%) sepia(87%) saturate(1797%) hue-rotate(359deg) brightness(99%) contrast(110%);
+}
+
+.servicios h2{
+    text-align: center;
+    margin: 15px 0px;
+    animation: deslizar 2s forwards;
+}
+
+.servicios h2::first-letter{
+    color: var(--naranja);
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+}
+
+
+@keyframes deslizar {
+  from{
+    transform: translateY(-100%);    
+    opacity: 0;
+  }
+    to {      
+    transform: translateY(-10%); 
+    opacity: 1;
+  }
+  
+}
+
+
+.servicios{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.tarjeta{
+    background-color: var(--gris);
+    display: inline-block;
+    height: 350px;
+    width: 28%;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+
+.tarjeta:hover{
+    background-color: var(--rosa);
+    color: var(--blanco);
+    transform: scale(110%);
+}
+
+.tarjeta:hover > .texto-tarjeta{
+    text-decoration: underline;
+}
+
+
+.tarjeta a{
+    text-decoration: none;
+    color: var(--blanco);
+    display: block;
+    overflow: hidden;
+}
+
+.tarjeta:hover a{
+    overflow: visible;
+}
+
+
+
+footer{
+    margin-top: 8%;
+    width: 100%;
+    padding: 20px;
+    clear: both;
+    background-color: var(--black);
+    color: white;   
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+/*PAGINA ABOUT*/
+
+.contenedor h2{
+    margin: 15px 20px;
+    animation: deslizar 2s forwards;
+    z-index: 100;
+}
+
+.contenedor h2::first-letter{
+    color: var(--naranja);
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+}
+
+.contenedor p{
+    animation: deslizar 1s forwards;
+    z-index: 100;
+    margin-left: 20px;
+    position: relative;
+}
+
+.contenedor img{
+    width: 400px;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+.contenedor img:hover{
+    transform: skew(-5deg, 5deg);
+    transition: 0.5s;
+    filter: sepia(100%);
+}
+
+/*PAGINA CONTACT*/
+
+form input{
+    display: block;
+    width: 80%;
+    margin-left: 30px;
+    padding: 5px;
+    border: 1px solid var(--black);
+}
+form label{
+    display: block;
+    margin-left: 20px;
+}
+
+form textarea{
+    display: block;
+    margin-left: 30px;
+    width: 80%;
+}
+
+form button{
+    margin-left: 30px;
+    padding: 10px;
+    background-color: var(--naranja);
+    border-radius: 5px;
+    border-color: var(--naranja);
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--black);
+    margin-top: 10px;
+}
+
+form button:hover{
+    background-color: var(--blanco);
+    color: var(--naranja);
+    border-color: var(--naranja);
+    
+}
+
+
+.contenedor input:focus{
+   border: 1px solid var(--naranja);
+}
