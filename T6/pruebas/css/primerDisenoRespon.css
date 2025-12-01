@@ -1,0 +1,82 @@
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  --color-gris: #eee;
+  --color-blanco: white;
+  --color-primario: #5558f8;
+  --color-secundaro: #8d8ffd;
+
+  --fuente-principal: Arial, Helvetica, sans-serif;
+
+  font-family: var(--fuente-principal);
+  background-color: var(--color-gris);
+}
+
+header {
+  background-color: var(--color-primario);
+  margin: 0 auto;
+  overflow-y: auto;
+  height: 10vh;
+  align-content: center;
+}
+
+header .header-flota-izq {
+  width: 30%;
+  float: left;
+  text-align: center;
+  margin: 0 1%;
+}
+
+header .header-flota-der {
+  width: 30%;
+  float: right;
+  text-align: center;
+  margin: 0 1%;
+}
+
+header object {
+  width: 30px;
+}
+
+main {
+  width: 95%;
+  margin: 0 auto;
+  background-color: var(--color-blanco);
+}
+
+@media screen and (max-width: 1023px) {
+  main .tarjeta {
+    align-content: center;
+    width: 90%;
+    height: 200px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px auto;
+    border-radius: 10px;
+  }
+
+  main .sec1 {
+    background-color: red;
+  }
+
+  main .sec2 {
+    background-color: yellow;
+  }
+
+  main .sec3 {
+    background-color: blue;
+  }
+
+  main .sec4 {
+    background-color: green;
+  }
+
+  footer {
+    background-color: var(--color-primario);
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
