@@ -1,0 +1,63 @@
+#ppal{
+        background-color: turquoise;
+        grid-area: ppal;
+    }
+
+#pie-ppal{
+    background-color: red;
+    grid-area: pie-ppal;
+}
+
+#c3n1{
+    background-color: lightgreen;
+    grid-area: c3n1;
+}
+
+#c3n2{
+    background-color: yellow;
+    grid-area: c3n2;
+}
+
+#c3n3{
+    background-color: orange;
+    grid-area: c3n3;
+}
+
+#c4n1{
+    background-color: violet;
+    grid-area: c4n1;
+}
+
+#c4n2{
+    background-color: pink;
+    grid-area: c4n2;
+}
+
+.contenedor{
+    display: grid;
+    /*Creamos 4 columnas de igual tamaño con fracciones*/
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,50px);
+    width: 80%;
+    background-color: #aaa;
+
+    /*mediante nombres de areas nos permite organizar mejor el contenido*/
+    grid-template-areas:
+        "ppal ppal c3n1 c4n1"
+        "ppal ppal c3n1 c4n1"
+        "ppal ppal c3n1 c4n1"
+        "ppal ppal c3n2 c4n1"
+        "ppal ppal c3n2 c4n2"
+        "ppal ppal c3n3 c4n2"
+        "ppal ppal c3n3 c4n2"
+        "pie-ppal pie-ppal c3n3 c4n2";
+    margin: 0 auto;
+    padding: 2.5px;
+    gap: 5px;
+}
+
+.contenedor > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,32 @@
+.contenedor{
+    background-color: #aaa;
+    display: grid;
+    /* column-gap: 10px;  Espacio entre columnas*/
+    /* row-gap: 20px;  Espacio entre filas*/
+    grid-template-columns: repeat(3,100px); /*3 columnas de 100px cada una*/
+    grid-template-rows: repeat(3,100px);
+    margin: 20px auto;
+    padding: 1em;
+    width: 80%;
+    height: 100vh;
+    justify-items: center;  /*Alinea los elementos en el eje horizontal*/
+    align-items: center; /*Alinea los elementos en el eje vertical*/
+    border: 1px solid red;
+    border-radius: 10px;
+    /* place-items: center; Alinea los elementos en ambos ejes*/
+
+    /*Para alinear el grid completo horizontalmente*/
+    justify-content: space-evenly;
+    /*Para alinear el grid completo verticalmente*/
+    align-content: space-evenly;    
+}
+
+.contenedor > div{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid #000;;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 80px; /*Centra el texto verticalmente*/
+}
