@@ -154,3 +154,10 @@ header {
   font-size: 13px;
   font-weight: bold;
 }
+
+.pasatiempos{
+  background-color: rgb(11, 65, 155);
+  color: white;
+  padding: 5px;
+  border-radius: 7px;
+}
