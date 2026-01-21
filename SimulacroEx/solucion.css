@@ -68,7 +68,7 @@
 }
 
 .cabecera .navegacion li::before{
-    content: "卍";
+    content: "^";
     color: white;
 }
 
