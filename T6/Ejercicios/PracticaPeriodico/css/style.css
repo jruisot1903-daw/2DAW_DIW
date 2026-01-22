@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+img{
+  width: 100%;
+}
 
 /* --------------- Estilos Header --------------- */
 
@@ -116,6 +119,7 @@ header {
 
 .lista-desple li:hover {
     background: #f0f0f0;
+    color: #000;
 }
 
 
@@ -210,15 +214,62 @@ header {
 
 
 /* ----------- NOTICIAS ----------- */
+#not1{
+  grid-area: not1;
+  background-color: #0b419b;
+}
+#not2{
+  grid-area: not2;
+  background-color: aquamarine;
+}
 
+
+#not3{
+  grid-area: not3;
+  background-color: aqua;
+}
+#not4{
+  grid-area: not4;
+  background-color: blueviolet;
+}
+#not5{
+  grid-area: not5;
+  background-color: chartreuse;
+}
+#not6{
+  grid-area: not6;
+  background-color: chocolate;
+}
+#not7{
+  grid-area: not7;
+  background-color: yellow;
+}
+#not8{
+  grid-area: not8;
+  background-color: tomato;
+}
+#not9{
+  grid-area: not9;
+  background-color: springgreen;
+}
 /* ----------- CONTENEDOR GENERAL ----------- */
-.noticias {
-  width: 90%;
-  max-width: 1100px;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.titulares{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(8,auto);
+  grid-template-areas: 
+  "not1 not2 not2"
+  "not1 not2 not2"
+  "not1 not2 not2"
+  "not3 not4 not6"
+  "not3 not5 not6"
+  "not7 not7 not8"
+  "not7 not7 not9"
+  "not7 not7 not9"
+  ;
+  width: 82%;
+  margin: 0 auto;
+  gap: 20px;
 }
 
 
