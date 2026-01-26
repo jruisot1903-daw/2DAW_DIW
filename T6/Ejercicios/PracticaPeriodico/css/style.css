@@ -216,41 +216,38 @@ header {
 /* ----------- NOTICIAS ----------- */
 #not1{
   grid-area: not1;
-  background-color: #0b419b;
 }
 #not2{
   grid-area: not2;
-  background-color: aquamarine;
 }
 
 
 #not3{
   grid-area: not3;
-  background-color: aqua;
 }
-#not4{
-  grid-area: not4;
-  background-color: blueviolet;
+#not4 {
+    display: flex;
+    flex-wrap: no-wrap;
+    grid-area: not4;
+    justify-items: center;
 }
-#not5{
-  grid-area: not5;
-  background-color: chartreuse;
+#not5 {
+    display: flex;
+    flex-wrap: no-wrap;
+    grid-area: not5;
+    justify-content: space-around;
 }
 #not6{
   grid-area: not6;
-  background-color: chocolate;
 }
 #not7{
   grid-area: not7;
-  background-color: yellow;
 }
 #not8{
   grid-area: not8;
-  background-color: tomato;
 }
 #not9{
   grid-area: not9;
-  background-color: springgreen;
 }
 /* ----------- CONTENEDOR GENERAL ----------- */
 .titulares{
@@ -273,4 +270,69 @@ header {
 }
 
 
+.autor {
+    text-transform: uppercase;
+    color: #888;
+    font-size: 0.9rem;
+    margin: 15px 0px;
+}
 
+.text{
+  margin: 20px 0px;
+  text-align: justify;
+}
+
+.text-trump{
+  margin: 20px 0px;
+  font-size: 2em;
+}
+
+.titulo{
+  margin: 20px 5px;
+  font-size: 3.5em;
+}
+
+.foto-autor {
+    display: inline-block;
+    border-radius: 50%;
+    filter: grayscale(1);
+    width: 150px;
+
+}
+
+.izq {
+    width: 55%;
+}
+
+.der {
+    width: 40%;
+    text-align: right;
+}
+
+.cursiva {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.enlace>a{
+  text-decoration: none;
+}
+
+.tiempo {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* ----------- Footer ----------- */
+footer {
+  background-color: rgb(11, 65, 155);
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.c-footer__brand__logo{
+  width: 200px;
+  height: auto;
+}
