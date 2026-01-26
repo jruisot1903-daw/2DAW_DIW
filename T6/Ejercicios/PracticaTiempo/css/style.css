@@ -1,0 +1,354 @@
+:root {
+    --azul: #04aeef;
+    --azul-oscuro: #0f5aca;
+    --gris-claro: #eff0f6;
+    --gris-oscuro: #c5c6cc;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*-------------------- Header --------------------*/
+
+.cabecera {
+    display: flex;
+    background-color: var(--azul);
+    width: 100%;
+    height: auto;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 5px;
+
+}
+
+.logo-movil {
+    display: none;
+}
+
+.logo-desktop {
+    width: 200px;
+}
+
+.div-buscar {
+    width: 45%;
+}
+
+.input-buscar {
+    padding: 10px;
+    border-radius: 20px;
+    width: 70%;
+    border: none;
+    margin-top: 15px;
+}
+
+.menu-icono {
+    height: 40px;
+    width: 40px;
+    color: white;
+    margin-top: 10px;
+}
+
+.linea {
+    stroke: white;
+    stroke-width: 6;
+    stroke-linecap: round;
+}
+
+/*-------------------- Main --------------------*/
+
+.titular-sub {
+    font-weight: bold;
+    border-bottom: 5px solid var(--azul-oscuro);
+    width: 70%;
+    margin: 25px auto;
+    font-size: 1.7vh;
+}
+
+.principales {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "lateral-1 titular-ppal titular-ppal titular-ppal"
+        "lateral-2 titular-ppal titular-ppal titular-ppal"
+        "lateral-3 inferior-1 lateral-4 inferior-2"
+    ;
+    width: 70%;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+#titular-ppal {
+    grid-area: titular-ppal;
+}
+
+#lateral-1 {
+    grid-area: lateral-1;
+}
+
+#lateral-2 {
+    grid-area: lateral-2;
+}
+
+#lateral-3 {
+    grid-area: lateral-3;
+}
+
+#lateral-4 {
+    grid-area: lateral-4;
+}
+
+#inferior-1 {
+    grid-area: inferior-1;
+}
+
+#inferior-2 {
+    grid-area: inferior-2;
+}
+
+article {
+    position: relative;
+}
+
+.lateral {
+    background-color: black;
+    border-radius: 15px;
+}
+
+.txt-sobre-img {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 20px;
+}
+
+/*
+degradado entre el fondo del div y la imagen contenida en el para crear un efecto fade to black
+para que tenga efecto tenemos que ponerle el fondo del elemento en negro si no te hace el efecto 
+del color que tengas el fondo
+*/
+
+.img-deg,
+.img-deg-50 {
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+.punto-azul {
+    color: var(--azul);
+}
+
+.inf-txt-cuerpo {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.ver-mas {
+    display: flex;
+    justify-content: end;
+    margin-right: 15%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 1.5vh;
+}
+
+/*-------------------- Main part 2 --------------------*/
+
+.eltiempo-play {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas:
+        "play1 play2 play3"
+    ;
+    width: 70%;
+    margin: 0 auto;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+#Play1 {
+    grid-area: play1;
+}
+
+#Play2 {
+    grid-area: play2;
+}
+
+#Play3 {
+    grid-area: play3;
+}
+
+.vaca {
+    width: 465px;
+}
+
+.eltiempo-play-div {
+    position: relative;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.txt-sobre-img2 {
+    position: absolute;
+    bottom: 30px;
+    text-align: justify;
+    left: 10px;
+    right: 10px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 20px;
+}
+
+/*-------------------- Footer 1 --------------------*/
+
+.footer1 {
+    background-color: var(--gris-claro);
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.pie-parte1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#titulo-pie-parte1 {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #222;
+    padding: 10px;
+    border-bottom: 1px solid var(--gris-oscuro);
+}
+
+#pie1,
+#pie2,
+#pie3,
+#pie4 {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+
+#pie1 h4,
+#pie2 h4,
+#pie3 h4,
+#pie4 h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.cont-textos-pie {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pie-parte1 .cont-textos-pie {
+    border-left: 1px solid var(--gris-oscuro);
+    padding-left: 20px;
+}
+
+.pie-parte1 #pie1 .cont-textos-pie {
+    border-left: none;
+    padding-left: 0;
+}
+
+
+
+
+.cont-textos-pie p,
+#pie4 div p {
+    margin: 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/*-------------------- Footer 2 --------------------*/
+
+.footer2 {
+    background-color: var(--gris-oscuro);
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.pie-parte2 {
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+
+.apps {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
+}
+
+.apps p {
+   margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.apps .iconos {
+    display: flex;          
+    gap: 10px;              
+    align-items: center;
+}
+
+.icono-apps {
+    height: 35px;           
+}
+
+.en-tu-web p {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.en-tu-web a{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.redes p{
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.icono-redes{
+    margin-right: 10px;
+}

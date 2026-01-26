@@ -1,0 +1,5 @@
+    /*degradado entre el fondo del div y la imagen contenida en el para crear un efecto fade to black*/
+    .img-deg {
+        -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    }
