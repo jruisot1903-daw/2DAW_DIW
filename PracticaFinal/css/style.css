@@ -106,21 +106,21 @@ body {
    MENÚ PRINCIPAL
 ============================ */
 .main-menu {
-    background: var(--green); /* MISMO VERDE QUE ARRIBA PARA QUE NO HAYA FRANJA */
-    border-top: 1px solid rgba(255,255,255,0.15); /* línea suave como en la original */
+    background: var(--green);
+    border-top: 1px solid rgba(255,255,255,0.15);
 }
 
 .menu-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 16px 0; /* MÁS ALTO */
 }
 
 .menu-links {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 32px; /* MÁS SEPARACIÓN ENTRE OPCIONES */
     margin: 0;
     padding: 0;
 }
@@ -128,11 +128,21 @@ body {
 .menu-links > li > a {
     color: var(--white);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px; /* MÁS GRANDE */
     text-decoration: none;
-    padding: 6px 0;
-    display: block;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ESPACIO ENTRE ICONO Y TEXTO */
     white-space: nowrap;
+}
+
+/* ICONOS DEL MENÚ */
+.menu-icon {
+    height: 28px;   /* MÁS GRANDES */
+    width: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* ICONOS BLANCOS */
 }
 
 /* ============================
@@ -145,12 +155,12 @@ body {
 .submenu {
     display: none;
     position: absolute;
-    top: 100%;          /* pegado justo debajo del enlace */
+    top: 100%; /* PEGADO AL MENÚ */
     left: 0;
     background: var(--white);
-    min-width: 240px;
-    border-radius: 0 0 6px 6px; /* sin curva arriba para que parezca pegado */
-    padding: 8px 0;
+    min-width: 260px; /* MÁS ANCHO */
+    border-radius: 0 0 6px 6px;
+    padding: 10px 0;
     margin-top: 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     z-index: 9999;
@@ -161,13 +171,13 @@ body {
 
 .submenu li {
     list-style: none;
-    padding: 6px 18px;
+    padding: 10px 22px; /* MÁS ALTO Y MÁS ANCHO */
 }
 
 .submenu li a {
     color: var(--text);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px; /* MÁS GRANDE */
     display: block;
 }
 
@@ -180,39 +190,51 @@ body {
 }
 
 /* ============================
-   BUSCADOR (VERSIÓN MÁS GRANDE)
+   Imagenes de títulos 
+============================ */
+.title-img {
+    height: 55px;       
+}
+
+.subtitle-img {
+    height: 60px;       
+}
+
+/* ============================
+   BUSCADOR 
 ============================ */
 .search-bar {
     display: flex;
     align-items: center;
     background: var(--white);
-    border-radius: 8px;
-    overflow: hidden;
-    height: 48px;          /* MÁS ALTO */
-    width: 300px;          /* MÁS ANCHO */
+    border-radius: 12px;
+    height: 60px;        
+    width: 380px;        
     border: 2px solid var(--white);
+    margin-left: 20px;
 }
 
 .search-bar input {
     flex: 1;
     border: none;
-    padding: 0 16px;       /* MÁS ESPACIO */
-    font-size: 16px;       /* TEXTO MÁS GRANDE */
+    padding: 0 12px;     
+    font-size: 18px;     
     outline: none;
 }
 
 .search-btn {
     border: none;
-    padding: 0 18px;       /* MÁS ANCHO PARA QUE QUEPA LA LUPA */
+    padding: 0 24px;     
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+     background-color: white;
 }
 
 .search-btn img {
-    height: 26px;          /* LUPA MÁS GRANDE */
-    width: 26px;
+    height: 32px;       
+    width: 32px;
     object-fit: contain;
 }
 
