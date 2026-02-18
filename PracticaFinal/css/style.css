@@ -44,7 +44,7 @@ body {
 .topbar .left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 .topbar .left img {
@@ -66,12 +66,30 @@ body {
     filter: brightness(0) invert(1);
 }
 
+.enlace{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    margin-left: 30px;
+    top: -3px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#SaludResp{
+    margin-right: 40px;
+}
+
+.zoom:hover{
+    transform: scale(1.1);
+}
+
 /* ============================
    LOGO + TÍTULOS
 ============================ */
 .header-logo {
     background: var(--green);
-    padding: 20px 0 5px; /* casi pegado al menú */
+    padding: 20px 0 5px; 
     text-align: center;
 }
 
@@ -83,7 +101,7 @@ body {
 }
 
 .logo-junta {
-    height: 140px; /* más grande */
+    height: 140px; 
 }
 
 .titles {
@@ -111,16 +129,17 @@ body {
 }
 
 .menu-content {
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 0; /* MÁS ALTO */
+    padding: 16px 0; 
+    position: relative;
+    top: 20px;
 }
 
 .menu-links {
     list-style: none;
     display: flex;
-    gap: 32px; /* MÁS SEPARACIÓN ENTRE OPCIONES */
+    gap: 32px; 
     margin: 0;
     padding: 0;
 }
@@ -128,21 +147,21 @@ body {
 .menu-links > li > a {
     color: var(--white);
     font-weight: 600;
-    font-size: 18px; /* MÁS GRANDE */
+    font-size: 18px; 
     text-decoration: none;
     padding: 8px 0;
     display: flex;
     align-items: center;
-    gap: 10px; /* ESPACIO ENTRE ICONO Y TEXTO */
+    gap: 10px; 
     white-space: nowrap;
 }
 
 /* ICONOS DEL MENÚ */
 .menu-icon {
-    height: 28px;   /* MÁS GRANDES */
+    height: 28px;  
     width: 28px;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* ICONOS BLANCOS */
+    filter: brightness(0) invert(1);
 }
 
 /* ============================
@@ -152,32 +171,49 @@ body {
     position: relative;
 }
 
+.long{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.dropdown:hover , .arrow:hover{
+    background-color: var(--green-dark);
+}
+
+.arrow::after{
+    content: "▼";
+    color: white;
+    position: absolute;
+    right: -20px;
+    top: 10px;
+}
+
 .submenu {
     display: none;
     position: absolute;
-    top: 100%; /* PEGADO AL MENÚ */
+    top: 100%; 
     left: 0;
     background: var(--white);
-    min-width: 260px; /* MÁS ANCHO */
+    min-width: 230px; 
     border-radius: 0 0 6px 6px;
     padding: 10px 0;
     margin-top: 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     z-index: 9999;
-
     list-style: none;
     padding-left: 0;
 }
 
 .submenu li {
     list-style: none;
-    padding: 10px 22px; /* MÁS ALTO Y MÁS ANCHO */
+    padding: 10px 22px; 
 }
 
 .submenu li a {
     color: var(--text);
     text-decoration: none;
-    font-size: 16px; /* MÁS GRANDE */
+    font-size: 16px; 
     display: block;
 }
 
@@ -205,13 +241,15 @@ body {
 ============================ */
 .search-bar {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background: var(--white);
-    border-radius: 12px;
-    height: 60px;        
-    width: 380px;        
+    border-radius: 10px;      
+    width: 300px;        
     border: 2px solid var(--white);
     margin-left: 20px;
+    position: relative;
+    top: -130px;
+    left: 94%;
 }
 
 .search-bar input {
@@ -223,21 +261,21 @@ body {
 }
 
 .search-btn {
-    border: none;
-    padding: 0 24px;     
+    border: none;  
     cursor: pointer;
     display: flex;
-    align-items: center;
-    justify-content: center;
-     background-color: white;
+    background-color: white;
 }
 
-.search-btn img {
-    height: 32px;       
+.search-btn img {     
     width: 32px;
     object-fit: contain;
 }
 
+.periodico{
+    height: 5px;
+    width: 20px;
+}
 
 /* ============================
    CARRUSEL
