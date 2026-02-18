@@ -1,4 +1,3 @@
-
 /* ============================
    COLORES
 ============================ */
@@ -8,6 +7,7 @@
     --white: #ffffff;
     --gray: #F4F6F9;
     --text: #333;
+    --grey-dark: rgb(131, 130, 130);
 }
 
 /* ============================
@@ -20,6 +20,7 @@ body {
     color: var(--text);
 }
 
+
 .container {
     width: 92%;
     max-width: 1400px;
@@ -31,7 +32,7 @@ body {
 ============================ */
 .topbar {
     background: var(--green);
-    padding: 8px 0;
+    padding: 20px 0;
     color: var(--white);
 }
 
@@ -62,11 +63,14 @@ body {
 }
 
 .social-icon {
-    height: 22px;
-    filter: brightness(0) invert(1);
+    margin-left: 30px;
+}
+.social-icon:hover{
+    transform: scale(1.1);
 }
 
-.enlace{
+
+.enlace {
     text-decoration: none;
     color: white;
     position: relative;
@@ -76,11 +80,11 @@ body {
     font-size: 18px;
 }
 
-#SaludResp{
+#SaludResp {
     margin-right: 40px;
 }
 
-.zoom:hover{
+.zoom:hover {
     transform: scale(1.1);
 }
 
@@ -89,7 +93,7 @@ body {
 ============================ */
 .header-logo {
     background: var(--green);
-    padding: 20px 0 5px; 
+    padding: 20px 0 5px;
     text-align: center;
 }
 
@@ -101,23 +105,29 @@ body {
 }
 
 .logo-junta {
-    height: 140px; 
+    height: 140px;
 }
 
 .titles {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     gap: 4px;
+    position: relative;
 }
 
 .title-img {
     height: 50px;
+    position: absolute;
+    left: 30%;
+
 }
 
 .subtitle-img {
     height: 36px;
     opacity: 0.95;
+    margin-right: 25%;
+    margin-bottom: 10px;
 }
 
 /* ============================
@@ -125,13 +135,13 @@ body {
 ============================ */
 .main-menu {
     background: var(--green);
-    border-top: 1px solid rgba(255,255,255,0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .menu-content {
     align-items: center;
     justify-content: space-between;
-    padding: 16px 0; 
+    padding: 16px 0;
     position: relative;
     top: 20px;
 }
@@ -139,29 +149,28 @@ body {
 .menu-links {
     list-style: none;
     display: flex;
-    gap: 32px; 
+    gap: 32px;
     margin: 0;
     padding: 0;
 }
 
-.menu-links > li > a {
+.menu-links>li>a {
     color: var(--white);
     font-weight: 600;
-    font-size: 18px; 
+    font-size: 18px;
     text-decoration: none;
     padding: 8px 0;
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
     white-space: nowrap;
 }
 
 /* ICONOS DEL MENÚ */
 .menu-icon {
-    height: 28px;  
+    height: 28px;
     width: 28px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
 }
 
 /* ============================
@@ -171,17 +180,18 @@ body {
     position: relative;
 }
 
-.long{
+.long {
     overflow-y: scroll;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
-.dropdown:hover , .arrow:hover{
+.dropdown:hover,
+.arrow:hover {
     background-color: var(--green-dark);
 }
 
-.arrow::after{
+.arrow::after {
     content: "▼";
     color: white;
     position: absolute;
@@ -192,14 +202,14 @@ body {
 .submenu {
     display: none;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     background: var(--white);
-    min-width: 230px; 
+    min-width: 230px;
     border-radius: 0 0 6px 6px;
     padding: 10px 0;
     margin-top: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 9999;
     list-style: none;
     padding-left: 0;
@@ -207,13 +217,13 @@ body {
 
 .submenu li {
     list-style: none;
-    padding: 10px 22px; 
+    padding: 10px 22px;
 }
 
 .submenu li a {
     color: var(--text);
     text-decoration: none;
-    font-size: 16px; 
+    font-size: 16px;
     display: block;
 }
 
@@ -226,14 +236,14 @@ body {
 }
 
 /* ============================
-   Imagenes de títulos 
+   Imagenes centrales 
 ============================ */
 .title-img {
-    height: 55px;       
+    height: 55px;
 }
 
 .subtitle-img {
-    height: 60px;       
+    height: 60px;
 }
 
 /* ============================
@@ -241,10 +251,10 @@ body {
 ============================ */
 .search-bar {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     background: var(--white);
-    border-radius: 10px;      
-    width: 300px;        
+    border-radius: 10px;
+    width: 300px;
     border: 2px solid var(--white);
     margin-left: 20px;
     position: relative;
@@ -255,26 +265,26 @@ body {
 .search-bar input {
     flex: 1;
     border: none;
-    padding: 0 12px;     
-    font-size: 18px;     
+    padding: 0 12px;
+    font-size: 18px;
     outline: none;
 }
 
 .search-btn {
-    border: none;  
+    border: none;
     cursor: pointer;
     display: flex;
     background-color: white;
 }
 
-.search-btn img {     
+.search-btn img {
     width: 32px;
     object-fit: contain;
 }
 
-.periodico{
+.periodico {
     height: 5px;
-    width: 20px;
+    width: 25px;
 }
 
 /* ============================
@@ -282,18 +292,18 @@ body {
 ============================ */
 .carousel {
     width: 100%;
-    max-height: 450px;
+    max-height: 550px;
     overflow: hidden;
 }
 
 .swiper {
     width: 100%;
-    height: 450px;
+    height: 550px;
 }
 
 .swiper-slide img {
     width: 100%;
-    height: 450px;
+    height: 550px;
     object-fit: cover;
 }
 
@@ -302,7 +312,7 @@ body {
 ============================ */
 .hero {
     background: var(--gray);
-    padding: 60px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -311,28 +321,64 @@ body {
     color: var(--green-dark);
 }
 
-/* ============================
-   FEATURES
+
+/*=============================
+  ENLACES VARIOS
 ============================ */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin: 40px auto;
-}
 
-.feature {
+.enlVarios{
     background: var(--gray);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+    padding: 20px 0;
 }
 
+.varios{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+}
+
+@keyframes cambioColor{
+    from{color: var(--text);}
+    to{color: var(--green);}
+}
+
+#EnInt:hover{
+ animation-name:cambioColor;
+ animation-duration: 4s;
+}
+
+.EnIm{
+    border-radius: 50%;
+}
+
+#cadena{
+    width: 30%;
+}
+
+#libro{
+    width: 50%;
+}
+
+#libroCerrao{
+    width: 30%;
+}
+
+#estadis{
+    width: 30%;
+}
+
+#wifi{
+    width: 30%;
+}
 /* ============================
    NEWS
 ============================ */
 .news {
     margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .news h2 {
@@ -342,19 +388,117 @@ body {
 }
 
 .news article {
-    background: var(--gray);
+    background: var(--white);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    width: 272px;
+    height: 500px;
+    display: inline-block;
+    box-shadow: 5px 5px 5px 5px var(--grey-dark);
+}
+
+
+.noticias>a{
+    text-decoration: none;
+}
+
+.noticias>a>h3{
+    color: var(--green);
+}
+
+.noticias>a>p{
+    color: black;
+}
+
+.noticias>a>span{
+    color: var(--text);
+}
+.noticias>a>img{
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+hr{
+    color: var(--text);
 }
 
 /* ============================
    FOOTER
 ============================ */
 footer {
-    background: var(--green-dark);
+    background: var(--grey-dark);
     color: var(--white);
-    text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+    position: relative;
+}
+
+footer a {
+    text-align: left;
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer img {
+    width: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+}
+
+.uno {
+    top: 10px;
+    right: 240px;
+}
+
+.dos {
+    top: 50px;
+    right: 250px;
+}
+
+.tres {
+    top: 90px;
+    right: 250px;
+}
+
+.footer-links>li>a {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+
+.footer-links>li>a:hover {
+    background-color: var(--green);
+    border-radius: 10px;
+}
+
+.social-icon-footer{
+    position: absolute;
+    right: 45%;
+    top: 75%;
+}
+
+.social-icon-footer>a>img{
+    width: 25px;
+    margin: 0 10px;
+}
+
+.social-icon-footer>a>img:hover{
+    transform: scale(1.1);
 }
