@@ -230,6 +230,25 @@ body {
     top: 10px;
 }
 
+.long {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.dropdown:hover,
+.arrow:hover {
+    background-color: var(--green-dark);
+}
+
+.arrow::after {
+    content: "▼";
+    color: white;
+    position: absolute;
+    right: -20px;
+    top: 10px;
+}
+
 .submenu {
     display: none;
     position: absolute;
