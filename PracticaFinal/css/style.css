@@ -26,7 +26,6 @@
    BASE
 ============================ */
 body {
-    margin: 0;
     font-family: system-ui, sans-serif;
     background: var(--white);
     color: var(--text);
@@ -34,7 +33,7 @@ body {
 
 
 .container {
-    width: 92%;
+    width: 100%;
     max-width: 1400px;
     margin: auto;
 }
@@ -559,3 +558,9 @@ footer img {
     transform: scale(1.1);
     filter: brightness(0) saturate(100%) invert(64%) sepia(91%) saturate(748%) hue-rotate(74deg);
 }
+
+
+/* ============================
+    DISEÑO RESPONSIVE
+============================ */
+
