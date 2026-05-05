@@ -190,7 +190,9 @@ body {
     white-space: nowrap;
 }
 
-/* ICONOS DEL MENÚ */
+/* ============================ 
+   ICONOS DEL MENÚ 
+============================ */
 .menu-icon {
     height: 28px;
     width: 28px;
@@ -341,19 +343,47 @@ body {
 ============================ */
 .carousel {
     width: 100%;
-    max-height: 650px;
+    max-height: 600px;
     overflow: hidden;
 }
 
 .swiper {
     width: 100%;
-    height: 650px;
+    height: 600px;
 }
 
 .swiper-slide img {
     width: 100%;
-    height: 650px;
+    height: 600px;
     object-fit: cover;
+}
+
+
+/*Cambiar el tamaño de las flechas y el color */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.5));
+}
+
+
+/* Tamaño de las bolitas de paginación */
+.swiper-pagination-bullet {
+    width: 25px !important;           
+    height: 25px !important;           
+    background: white !important;
+    opacity: 0.7 !important;           
+    margin: 0 6px !important; 
+}
+
+/* Tamaño de la bola cuando está ACTIVA */
+.swiper-pagination-bullet-active {
+    width: 30px !important;            
+    height: 30px !important;
+    background: var(--green) !important; 
+    opacity: 1 !important;
 }
 
 /* ============================
@@ -583,3 +613,102 @@ footer img {
     DISEÑO RESPONSIVE
 ============================ */
 
+/* MÓVILES (Menos de 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* Ajustes de Topbar */
+    .topbar-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .topbar .left, .topbar .right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar{
+        top: -24px;
+        left: -1%;
+        width: 710px;
+    }
+
+    #cadena{
+        width: 25%;
+    }
+    #estadis{
+        width: 25%;
+    }
+
+    #tlf, #correo {
+        position: static; /* Importante: eliminamos el absoluto para que fluyan */
+        margin: 5px 0;
+    }
+
+    /* Ajustes de Header y Logo */
+    .logo-junta {
+        height: 80px;
+    }
+
+    .title-img, .subtitle-img {
+        position: static;
+        height: auto;
+        width: 80%; /* Imagen escala al ancho de pantalla */
+        margin: 5px auto;
+    }
+
+    /* Menú de Navegación */
+    .menu-links {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .submenu {
+        position: static; /* El submenú se despliega hacia abajo ocupando espacio */
+        width: 100%;
+        box-shadow: none;
+    }
+
+    /* Carrusel y Hero */
+    .swiper, .swiper-slide img {
+        height: 300px; /* Reducimos altura en móvil */
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    /* Enlaces Varios (Iconos redondos) */
+    .varios {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Noticias */
+    .news article {
+        width: 100%; /* Una noticia por fila */
+        height: auto;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .footer-links {
+        position: static; /* Quitamos absolutos */
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .social-icon-footer {
+        position: static;
+        margin-top: 20px;
+    }
+}
